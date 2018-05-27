@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1483214258 source:c:\users\parker\documents\csc340hw#4\csc340hw#4b\squarematrix.cpp
+	"squarematrix.h"
+
+1476072285 c:\users\parker\documents\csc340hw#4\csc340hw#4b\squarematrix.h
+	<iostream>
+	<algorithm>
+	<vector>
+

@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1481667460 source:c:\users\parker\documents\csc340hw#9\employee.cpp
+	"employee.h"
+
+1481495361 c:\users\parker\documents\csc340hw#9\employee.h
+	"person.h"
+
+1481494465 c:\users\parker\documents\csc340hw#9\person.h
+	<iostream>
+	<string>
+	<stdlib.h>
+
+1481496792 source:c:\users\parker\documents\csc340hw#9\main.cpp
+	"employee.h"
+
+1481495625 source:c:\users\parker\documents\csc340hw#9\person.cpp
+	"person.h"
+

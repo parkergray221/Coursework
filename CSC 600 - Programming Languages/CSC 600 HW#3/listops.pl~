@@ -1,0 +1,40 @@
+% Rules
+% A vast majority of these were within the lecture notes and I used the
+% provided examples within the notes.
+
+member1(X, [X|_]). %self explanatory.
+member1(X, [_|T]) :- member1(X, T).
+
+first1(X,[X]).
+first1(X,[X|_]). %print the head of the list every time.
+
+last1(X,[X]).
+last1(X,[_|T]):- last1(X,T). %Recursively gets the 'Tail' of list of size n-1 until n = 1.
+
+two_adjacent(X,Y,[X,Y|_]). %if elements x and y are in the head and next to each other....
+two_adjacent(X,Y,[_|T]) :- two_adjacent(X,Y,T). % else they must be in the tail next to each other.
+
+three_adjacent(X,Y,Z,[X,Y,Z|_]). %if elements x y and z are in the head and next to each other....
+three_adjacent(X,Y,Z,[_|T]) :- three_adjacent(X,Y,Z,T). % otherwise the three elements are in the tail.
+
+append1([],L,L). %appending list L to an empty list produces list L.
+append1([X|T1],L2,[X|T3]) :- append1(T1,L2,T3). %appending L2 to list [X|T1] places all of L2 at the tail of T3.
+
+delete1(X,[X|T],T). %delete element X from head if element we wish to delete is head. return list made of tail.
+delete1(X,[H,T],[H,T1]) :- delete1(X,T,T1). %else element x must be in tail and must return T1 which is T - X.
+
+append2([],E,[E]). %put element E in the list if list is empty.
+append2([X|T1],E2,[X|T3]) :- append2(T1,E2,T3). % else put element E2 in the tail T1 and return new tail T3.
+
+insert(X,L,XL) :- delete1(X,XL,L). %i don't actually understand how this works, but it's in the lecture notes. ;)
+
+length1([],0). % if list is empty lengith is 0.
+length1([_|T],N) :- length1(T,N1), N is 1 + N1. %if list is not empty then the length of the list is the length of the tail + 1 (for the inclusion of the head)
+
+reverse1([],[]). %the reversal of an empty list is the empty list.
+reverse1([H|T],Rev) :- reverse1(T,RT), append2(RT,[H],Rev). %the reversal of a not empty list is the reversal of the tail placed at the front of the new list Rev followed by H.
+
+palindrome(L1) :- reverse1(L1,Rev), Rev=L1. %use reverse1 to check if list Rev has the same identity as list L1.
+
+display1([]) :- nl. %go to new line if list contains nothing
+display1([H|T]) :- write(H), tab(1), display1(T). %else write head then write tail

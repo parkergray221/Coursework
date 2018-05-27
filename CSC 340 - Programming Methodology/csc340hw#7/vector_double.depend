@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1479351415 source:d:\users\parker\documents\codeblocks projects\csc340hw#7\vector_doubletest.cpp
+	"vector_double.h"
+
+1479351560 d:\users\parker\documents\codeblocks projects\csc340hw#7\vector_double.h
+	<iostream>
+
+1483216759 source:c:\users\parker\documents\csc340hw#7\vector_doubletest.cpp
+	"vector_double.h"
+
+1483216725 c:\users\parker\documents\csc340hw#7\vector_double.h
+	<iostream>
+
+1479427508 source:d:\users\parker\documents\codeblocks projects\csc340hw#7\vector_double.cpp
+	"vector_double.h"
+
+1483216718 source:c:\users\parker\documents\csc340hw#7\vector_double.cpp
+	"vector_double.h"
+

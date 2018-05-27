@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1481132202 source:c:\users\parker\documents\csc340hw#8\linkedlisttest.cpp
+	"linkedlist.h"
+
+1481132275 source:c:\users\parker\documents\csc340hw#8\linkedlist.cpp
+	"linkedlist.h"
+
+1480634752 c:\users\parker\documents\csc340hw#8\linkedlist.h
+	<iostream>
+
