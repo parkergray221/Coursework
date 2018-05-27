@@ -1,0 +1,264 @@
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+@import url("http://fonts.googleapis.com/css?family=Quicksand");
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Store the main color and
+ * background color as variables
+ */
+body {
+  font-family: 'Georgia';
+  color: #444;
+  background-image: url("/fa17g13/images/w4.jpg");
+  background-repeat: no;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+header {
+  font-family: 'Quicksand';
+  padding: 50px 10px;
+  color: #fff;
+  font-size: 25px;
+  text-align: left;
+  font-weight: bold;
+/*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color: #fa5b4d;
+  border-bottom: 1px solid #df1806;
+  text-shadow: 0px -1px 0px #df1806;
+}
+header li {
+  display: inline;
+  float: right;
+  list-style-type: none;
+}
+header li a {
+  display: block;
+  padding: 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+header li a:hover {
+  background-color: #f4d03f;
+}
+.container {
+  width: 1000px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+.main-content {
+  float: left;
+  width: 300px;
+}
+.main-content p {
+  margin-bottom: 20px;
+}
+.sidebar {
+  float: right;
+  width: 400px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: auto;
+  background-color: #fef5e7;
+  text-align: left;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.sidebar img {
+  border-radius: 4px;
+  padding: 5px;
+}
+.sidebar rcorners {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 200px;
+}
+img:hover {
+  -webkit-box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);
+  box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);
+}
+img:hover h1 {
+  font-family: 'Quicksand';
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  border-radius: 2px 2px 0px 0px;
+  margin-bottom: 10px;
+}
+img:hover p {
+  font-size: 13px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+p {
+  line-height: 1.8;
+}
+.inner_block {
+  display: inline-block;
+  float: left;
+  width: 50%;
+}
+.inner_block img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.rcorners2 {
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+.self_picture {
+  float: left;
+  left-margin: 0px;
+  padding-left: 0px;
+}
+.text {
+  float: left;
+}
+left-margin 0px {
+  padding-left: 0px;
+}
+footer {
+  width: auto;
+  height: 80px;
+  margin: 50px auto;
+  border-top: 1px dotted #ccc;
+  padding-top: 5px;
+  font-size: 13px;
+  background-color: #faf9f0;
+}
+label.required:after {
+  content: '*';
+  color: #f00;
+}
+.row {
+  margin: 5px;
+}
+#submit_button {
+  width: 109px;
+  height: 34px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #86c5fa;
+  -webkit-box-shadow: inset 0 2px rgba(255,255,255,0.29);
+  -moz-box-shadow: inset 0 2px rgba(255,255,255,0.29);
+  -webkit-box-shadow: inset 0 2px rgba(255,255,255,0.29);
+  box-shadow: inset 0 2px rgba(255,255,255,0.29);
+  border: solid 1px #77a4cb;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 7px;
+}
+#submit_button:hover {
+  background-color: #0000a0;
+}

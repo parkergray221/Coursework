@@ -1,0 +1,139 @@
+doctype html
+html
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111304983-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111304983-1');
+    meta(charset='utf-8')
+    | &#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    | &#x9;
+    script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+    | &#x9;
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    | &#x9;
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    |     
+    script(src='https://code.jquery.com/jquery-2.2.0.min.js')
+    // Load Header and Footer
+    script.
+      $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+      });
+    | &#x9;
+    | &#x9;
+    style.
+      #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/A._S._Bradford_House.JPG');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      opacity: 0.2;
+      filter:alpha(opacity=40);
+      }
+      .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+      }
+      .cancelbtn {
+      padding: 6px 13px;
+      background-color: #f44336;
+      color: white;
+      margin-left: 10px;
+      }
+    | &#x9;
+    | &#x9;
+    title RECycle
+  | &#x9;
+  body
+    // Background
+    #background
+    // Header
+    #header  
+    | &#x9;&#x9;
+    | &#x9;&#x9;
+    #mainform.container
+      .row
+        .col-md-12
+          #signupbox.mainbox.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+            .panel.panel-info
+              .panel-heading
+                .panel-title Sign Up
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                div(style='float:right; font-size: 85%; position: relative; top:-10px')
+                  a#signinlink(href='login') Sign In
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .panel-body
+                form.form-horizontal(role='form', method='post', action='signup', onsubmit='return checkblank(this);')
+                  #signupalert.alert.alert-danger(style='display:none')
+                    p Error:
+                    |  
+                    span
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .form-group
+                    label.col-md-3.control-label(for='first_name') First Name
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .col-md-9
+                      input.form-control(type='text', name='first_name', placeholder='First Name')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .form-group
+                    label.col-md-3.control-label(for='last_name') Last Name
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .col-md-9
+                      input.form-control(type='text', name='last_name', placeholder='Last Name')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .form-group
+                    label.col-md-3.control-label(for='mob_no') Mobile Number
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .col-md-9
+                      input.form-control(type='number', name='mob_no', placeholder='Mobile Number')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .form-group
+                    label.col-md-3.control-label(for='user_name') User Name
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .col-md-9
+                      input.form-control(type='text', name='user_name', placeholder='User Name')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .form-group
+                    label.col-md-3.control-label(for='password') Password
+                    | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                    .col-md-9
+                      input.form-control(type='password', name='password', placeholder='Password')
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  
+                      
+                 
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  p
+                    | By creating an account you agree to our 
+                    a(href='#') Terms & Privacy
+                    | .
+                  .form-group
+                  | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                  .col-md-offset-3.col-md-9
+                   .clearfix
+                    button.cancelbtn(type="button") Cancel
+                     button#btn-signup.btn.btn-info(type='submit')
+                      amp  Sign Up
+                    
+    // Footer
+    #footer  
+

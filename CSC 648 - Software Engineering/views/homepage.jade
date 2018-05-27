@@ -1,0 +1,232 @@
+doctype html
+html
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111304983-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111304983-1');
+
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(href='https://fonts.googleapis.com/css?family=Aguafina Script', rel='stylesheet')
+    | &#x9;
+    link(href='https://fonts.googleapis.com/css?family=Allura', rel='stylesheet')
+    | &#x9;
+    link(href='https://fonts.googleapis.com/css?family=Annie Use Your Telescope', rel='stylesheet')
+    // Load Header and Footer
+    script.
+      $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+      });
+    script.
+      $(document).ready(function(){
+      $(".chatbox").height(25);
+      $(".chatheader").click(function(){
+      if ($(".chatbox").height() == 25) {
+      $(".chatbox").height(400);
+      } else {
+      $(".chatbox").height(25);
+      }
+      });
+      $("#submitB").click(function() {
+      $(".textbox").append("<div class='row'>" +
+      "<div class='col-sm-9'> <p class='usertext'>" + $('#usermessage').val() + "<p> </div>" +
+      "<div class='col-sm-3'> <img class='usericon' style='width: 30px; height: 30px;' src='http://www.free-icons-download.net/images/user-icon-27998.png'> </div>" +
+      "</div>");
+      $("#usermessage").val("");
+      });
+      });  
+    style.
+      #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/A._S._Bradford_House.JPG');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      opacity: 0.2;
+      filter:alpha(opacity=40);
+      z-index: -1;
+      }
+      #SampleHouseSection {
+      height: 300px;
+      width: 100%;
+      background-size: cover;
+      margin-top:-20px;
+      background-image: url('http://designexplora.com/wp-content/uploads/2016/07/Design-Wallpaper-And-Photo-High-Resolution-Download-Interior-Design-In-Interior-Design-Pictures.jpg');
+      }
+       .text {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      padding: 16px 32px;
+      }
+      .BlankSection {
+      height: 100px;
+      background-color: transparent;
+      }
+      #RECycleLogoBox {
+      width: 50%;
+      margin: 0 auto;
+      color: white;
+      margin-top: 15%;
+      text-align: center;
+      }
+      #TitleText {
+      width: 100%;
+      margin-top:0px;
+      color: white;
+      }
+      .thumbnail {
+      position: relative;
+      padding: 0px;
+      margin-bottom: 20px;
+      align: center;
+      }
+      .thumbnail:hover {
+      filter: drop-shadow(8px 8px 10px black);
+      }
+      .thumbnail img {
+      width: 300px;
+      }
+      p {
+      color:black;
+      margin-left:10px;
+      }
+      .chatbox{
+      background-color: white;
+      border: 1px solid;
+      border-color: #e6e6e6;
+      width: 252px;
+      height: 400px;
+      position: fixed;
+      box-shadow: 1px 1px 1px 1px grey;
+      margin: auto;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      }
+      .chatheader{
+      background-color: #6666ff;
+      width: 252px;
+      height: 25px;
+      border: 1px solid;
+      border-color: #6666ff;
+      position: relative;
+      text-align:center;
+      left: -1px;
+      top: 0px;
+      z-index: 1;
+      }
+      .textbox{
+      background-color: white;
+      width: 250px;
+      height: 347px;
+      border: 1px solid;
+      border-color: #e6e6e6;
+      position: relative;
+      left: 0px;
+      bottom: 0px;
+      overflow-x: scroll;
+      }
+      .inputbox{
+      background-color: white;
+      width: 250px;
+      height: 27px;
+      border: 1px solid;
+      border-color: #e6e6e6;
+      position: relative;
+      left: 0px;
+      bottom: 0px;
+      }
+      #usermessage{
+      position: relative;
+      left: 15px;
+      }
+      #submitB {
+      position: relative;
+      left: 11px;
+      height: 25px;
+      width: 75px;
+      bottom: 2px;
+      }
+      .customerServiceMessage {
+      position: relative;
+      }
+      .usertext {
+      position:relative;
+      direction: rtl;
+      }
+      .usericon {
+      position: relative;
+      }
+    |     
+    title RECycle
+  |  
+  body(onload='clearStore()')
+
+    // Background
+    #background
+    // Header
+    #header  
+    // SampleSection
+    #SampleHouseSection.container-fluid
+      #RECycleLogoBox
+    | &#x9;
+    .container-fluid
+    // NewHousesSection
+   #FeatureSection.container-fluid
+     #TitleText
+        h2.text-center(style="font-size: 400%; font-family: 'Helvetica Neue';color:#191970;")  Featured Properties for Sale
+        br
+        br
+        // Top 6 Feature House
+        .row
+          - each item in rows
+            .col-xs-18.col-sm-6.col-md-3
+               .thumbnail
+                 a(href='home_search_results?id=#{item.id}')
+                    img(src='#{item.image}', style="height:180px;")
+                    .text Check It Out
+                    .caption
+                   p  
+                    |$#{item.price}
+                    br
+                    |#{item.house_number},#{item.street},#{item.city},#{item.state},#{item.zipcode}
+       .container
+        .chatbox
+          .chatheader
+            p(style='color: white;') Customer Service
+          .textbox
+            .customerServiceMessage
+              .row
+                .col-sm-3
+                  img(style='width: 30px; height: 30px;', src='http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/matte-grey-square-icons-alphanumeric/118473-matte-grey-square-icon-alphanumeric-letter-rr.png')
+                .col-sm-9
+                  p Hello, How can I help you today? 
+          .inputbox
+            .row
+              input#usermessage(type='text', placeholder='type something', size='15px')
+              button#submitB.btn.btn-primary.btn-xs(type='button')
+                span.glyphicon.glyphicon-share-alt
+          script.
+            function clearStore()
+                     { 
+                        localStorage.clear();
+                     }
+       #footer   
+     
+

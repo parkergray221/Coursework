@@ -1,0 +1,200 @@
+doctype html
+html
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111304983-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111304983-1');
+    title=RECycle
+
+    
+    link(rel="shortcut icon" href="/images/sfsu.jpg" type="image/jpg")
+    meta(charset='utf-8')
+    | &#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    | &#x9;
+    script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+    | &#x9;
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    | &#x9;
+    
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    |     
+    // Load Header and Footer
+    script.
+      $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+      });
+    | &#x9;
+    | &#x9;
+    
+    style.
+     
+      #map {
+      height: 500px;
+      width: 500px;
+      margin-top: 0%;
+      margin-left: 10%;
+      }
+      #details{
+      float: right;
+      margin-top: 0%;
+
+      }    
+      ul{list-style-type:none; }
+      #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/A._S._Bradford_House.JPG');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      opacity: 0.2;
+      filter:alpha(opacity=40);
+      z-index: -1;
+      }
+      #message{
+      position: relative;
+      right: 100px;  
+      top: 0px;
+      float: right;
+      padding-right: 10px;
+      font-family: 'Open Sans Condensed', arial, sans;
+      width: 350px;
+      padding: 30px;
+      background: #FFFFFF;
+      margin: 50px auto;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+      -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+      -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+      }
+      #message p{
+      background: #4D4D4D;
+      text-transform: uppercase;
+      font-family: 'Open Sans Condensed', sans-serif;
+      color: white;
+      font-size: 18px;
+      font-weight: 100;
+      padding: 20px;
+      margin: -30px -30px 30px -30px;
+      }
+      #message input[type="submit"]{
+      -moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+      -webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+      box-shadow: inset 0px 1px 0px 0px #45D6D6;
+      background-color: #2CBBBB;
+      border: 1px solid #27A0A0;
+      display: inline-block;
+      cursor: pointer;
+      color: #FFFFFF;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 14px;
+      padding: 8px 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+      }
+      #message input[type="submit"]:hover {
+      background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+      background-color:#34CACA;
+      }
+      td{padding: 30px;}
+  
+  | &#x9;
+
+
+  body
+   
+    #header
+    #background
+      
+         if (rows=='Sorry Not FOund!')
+           p #{rows}
+         else
+      table
+      
+        - each item in rows 
+         
+          tr
+           td
+            #details
+                ul
+                 li
+                   img(src="#{item.image}",style="height:200px;width:400px;margin-top: 5%;")
+                 li(style='font-size:20px') Square Feet: #{item.square_size}
+                 li(style='font-size:20px') Number of Bedrooms: #{item.number_of_bedrooms}
+                 #address Address: #{item.street},#{item.city},#{item.zipcode}
+             
+              tr
+               td(valign="top")
+                #map 
+                    |     
+                    script.
+                       function initMap() {
+                          var map = new google.maps.Map(document.getElementById('map'), {
+                          zoom: 12,
+                          center: {lat: 37.722, lng: -122.478}
+                          });
+                          var geocoder = new google.maps.Geocoder();
+      
+                          var address = document.getElementById('address').innerHTML;
+                          geocoder.geocode({'address': address}, function(results, status) {
+                          if (status === 'OK') {
+                            var resultsMap = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 12,
+                            center: {lat: 37.722, lng: -122.478}
+                           });
+                            resultsMap.setCenter(results[0].geometry.location);
+                            var marker = new google.maps.Marker({
+                            map: resultsMap,
+                            position: results[0].geometry.location
+                          });
+                        } else {
+                           alert('Geocode was not successful for the following reason: ' + status);
+                         }
+                         });
+                       }
+                    script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDOIMFbTbLtGiTA6u-FPXasu4vmIF-HL2A&callback=initMap')
+ 
+            #message                 
+             form#contact_form(action='message?id=#{item.id}', method='POST',onsubmit = "return message_submit()")
+
+
+                  p Interested in buying this house? Fill out the details
+                  label(for='bname') Your name:
+                    br
+                    input(name='bname', type='text', size='30')
+                    br
+                  label(for='bemail') Your email:
+                    br
+                    input(name='bemail', type='text', size='30')
+                    br
+                  label(for='vphone') Your phone:
+                    br
+                    input(name='vphone', type='text', size='30')
+                    br
+                  label(for='messages') Your message:
+                    br
+                  textarea(name='messages', rows='7', cols='30') 
+                    
+                  input#submit_button(type='submit')   
+                script.
+                 function message_submit() {
+
+                   alert("Message submitted successfully");
+                 }                                                     
+   #footer
+            
+
+
+              
+              

@@ -1,0 +1,94 @@
+extends layout
+
+block content
+  
+
+
+
+  p
+    img.self_picture(src='/fa17g13/images/3.jpeg',style="width:650px;height:860px;border:0;", align='left')
+  
+  
+     
+
+block sidebar
+
+  p
+    | Hello, it seems you've just stumbled
+    | upon this page to know about me. 
+  p
+    |If you're just curious about my story, read along
+    |or you just wanna grab my resume, 
+    |just 
+    a(href='/images/Resume.pdf', target='_blank') click here
+
+  br
+  br
+  p
+     |I believe in the adage, 
+     |"Change is the end result of true learning" 
+     |and being associated with Big data analytics, 
+     |my idea is to bring about a gamut of life 
+     |changing impacts in people's lives. 
+     |After joining Capgemini's Big Data 
+     |Analytics team, I learned about Hadoop 
+     |and R following which I worked on 
+     |numerous projects involving Hadoop like 
+     |detecting fraud rings in e-commerce transactions, 
+     |extract-transform-load telecommunication data etc. 
+     |That is when I developed a keen interest 
+     |in Big data analytics. 
+  br
+  p
+    |Drop in a message
+
+    form#contact_form(action='#', method='POST', enctype='multipart/form-data')
+      .row
+        label(for='name') Your name:
+        br
+        | 
+        input#name.input(name='name', type='text', value='', size='30')
+        br
+      | 
+      .row
+        label(for='email') Your email:
+        br
+        | 
+        input#email.input(name='email', type='text', value='', size='30')
+        br
+      | 
+      .row
+        label(for='message') Your message:
+        br
+        | 
+        textarea#message.input(name='message', rows='7', cols='30')
+        br
+      | 
+      input(type='hidden', name='action', value='submit')
+      | 
+      input#submit_button(type='submit', value='Send email')
+
+
+  
+  p
+    a(target='_blank', title='find us on Facebook', href='http://www.facebook.com/afreen90')
+      img(alt='follow me on facebook', src='//login.create.net/images/icons/user/facebook_30x30.png', border='0')
+    
+
+    a(target='_blank', title='follow me on twitter', href='http://www.twitter.com/PLACEHOLDER')
+      img(alt='follow me on twitter', src='//login.create.net/images/icons/user/twitter-b_30x30.png', border='0')
+
+
+    a(target='_blank', title='Linkedin', href='https://www.linkedin.com/in/sabihabarlaskar90')
+      img(alt='linkedin', src='/images/In-2C-34px-R.png', border='0')
+    
+    a(target='_blank', title='github', href='https://github.com/sabiha90')
+      img(alt='github', src='/images/GitHub-Mark-32px.png', border='0')
+
+
+
+
+    
+   
+
+

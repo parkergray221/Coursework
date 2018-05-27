@@ -1,0 +1,222 @@
+doctype html
+html
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111304983-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111304983-1');
+    meta(charset='utf-8')
+    | &#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    | &#x9;
+    script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+    | &#x9;
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    // Load Header and Footer
+    script.
+      $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+      });
+    | &#x9;
+    | &#x9;
+    | &#x9;
+    | &#x9;
+    | &#x9;
+    title RECycle
+    | &#x9;
+    | &#x9;
+    style.
+      .pricetag {
+      color: #000000;
+      font-weight: bold;
+      top: 0;
+      left: 80%;
+      position: absolute;
+      width: 100px;
+      height: 50px;
+      background-color: white;
+      border: 3px dashed #ccc;
+      text-align:center;
+      font-size: 150%;
+      }
+      #featureBox {
+      position: relative;
+      display: inline-block;
+      width: 400px;
+      height: 300px;
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      margin: 10px;
+      margin-top: 50px;
+      border: 3px dotted black;
+      }
+      #featureBox:hover {
+      filter: drop-shadow(8px 8px 10px black); 
+      }
+      #featureImage {
+      width: 400px;
+      height: 250px;
+      }
+      body {
+      position: relative;
+      opacity: 0.8;
+      }
+      .panel {
+      width: 100%
+      }
+      .BlankSection {
+      height: 100px;
+      background-color :transparent;
+      }
+      #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/A._S._Bradford_House.JPG');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      opacity: 0.2;
+      filter:alpha(opacity=40);
+      z-index: -1;
+      }
+      #lineimage {
+      position: relative;
+      width: 50%;
+      height: 5px;
+      }
+      .container-fluid {
+      position: relative;
+      display: inline-block;
+      }
+      .panel-primary {
+      border-color: #337ab7;
+      margin-top: 0px;
+      }
+      #divAsc{float:right;}
+  | &#x9;
+  body
+    // Background
+    #background
+    // Header
+    #header   
+    h4 Search Result...
+    // ArrowLine Image
+    img#lineimage(src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Flowchart_Line.svg/1280px-Flowchart_Line.svg.png')
+    | &#x9;&#x9;
+    br
+    
+    .container-fluid
+      .row
+        br
+        // Filter Panel
+        .col-xs-6.col-sm-3.col-md-3
+          .panel.panel-primary
+            .panel-heading
+              h3.panel-title Sort
+            | &#x9;&#x9;&#x9;&#x9;&#x9;   
+            .panel-body
+              .w3-bar-item
+                select(name="selectPicker", id="selOption",onchange="loadDoc()")
+                   option(value='none') Sort Results By
+                   option(value='price') Price
+                   option(value='number_of_bedrooms') Number of Bedrooms
+                   option(value='square_size') Square feet
+                   option(value='year_of_construction') Construction year
+                #divAsc
+                  input(type="radio", name= "radioSel", class="radioSel", value='ASC',onchange="loadDoc()", checked) 
+                  label(for="contactChoice1") Ascending
+                  br
+                  input(type="radio", name= "radioSel",class="radioSel",onchange="loadDoc()",value="DESC") 
+                  label(for="contactChoice1") Descending
+        .col-xs-9.col-sm-9.col-md-9
+          .container
+          #searchResult
+            p #{length} results displayed
+            - each item in rows
+               #featureBox
+                    a(href="home_search_results?id=#{item.id}") 
+                     p.pricetag$#{item.price} 
+                     img(src="#{item.image}", style="height:250px;width:400px;")
+                    p.text-center #{item.house_number}, #{item.street}, #{item.city}, #{item.state}, #{item.zipcode}, Beds: #{item.number_of_bedrooms}, Area: #{item.square_size},Built year: #{item.year_of_construction}
+
+    #footer  
+
+
+      script.
+ 
+         function loadDoc() {
+            var radio = document.getElementsByClassName("radioSel");
+            for(i=0;i<radio.length;i++)
+            {
+              if(radio[i].checked){
+                 opt = radio[i].value;
+                 opt = opt.replace(/^"|"$/g, '');
+              }
+            }
+            var sel = document.getElementById("selOption");
+            var search_val = document.getElementById("search_input").value;
+            var select_opt = document.getElementById("zip");
+            var query = sel.value;
+            var param1 = select_opt.value;
+            var url = "sort?q="+query +  "&criteria" + "=" + param1 + "&criteria_val" + "=" + search_val + "&" + "o" + "=" + opt;
+            console.log(query);
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              console.log(document.getElementById("featureBox").innerHTML);
+
+              var data = this.responseText;
+              var jsonResponse = JSON.parse(data);
+              var rows = jsonResponse.rows;
+              var divResults = document.getElementById("searchResult");
+             
+              divResults.innerHTML = "";
+
+             
+
+              for (var i = 0; i < rows.length; i++){
+                var row = rows[i];
+                var div = document.createElement("div");
+                var p1 = document.createElement("p");
+                var img = document.createElement("img");
+                var a = document.createElement("a");
+                var p2 = document.createElement("p");
+
+      
+                a.setAttribute("href","home_search_results?id=" + row.id);
+                p1.setAttribute("class","pricetag overlay");
+                p1.innerHTML = "$" + row.price;
+                img.setAttribute("src", row.image);
+                img.setAttribute("height","250px");
+                img.setAttribute("width","400px");
+                p2.setAttribute("class","text-center");
+                p2.innerHTML = row.house_number + ", " + row.street + ", " + row.city + ", " + row.state + ", Beds:" + row.number_of_bedrooms + ", Built year:" + row.year_of_construction;
+                div.setAttribute("id","featureBox");
+
+              
+                a.appendChild(p1);
+                a.appendChild(img);
+                div.appendChild(a);
+                div.appendChild(p2);
+                divResults.appendChild(div);
+              }              
+             }
+           };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+             }
+

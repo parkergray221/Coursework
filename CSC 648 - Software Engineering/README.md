@@ -1,0 +1,2 @@
+# Real Estate Website
+This real estate website was the culmination of many weeks of work in Software Engineering, being the only homework we had for the entirety of the class. The use of this website can be done with node.js by running 'node app.js' from command prompt when in the current directory.

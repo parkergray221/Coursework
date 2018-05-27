@@ -1,0 +1,104 @@
+doctype html
+html
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111304983-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111304983-1');
+    meta(charset='utf-8')
+    | &#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    | &#x9;
+    script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+    | &#x9;
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    |     
+    // Load Header and Footer
+    script.
+      $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+      });
+    | &#x9;
+    | &#x9;
+    style.
+      #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/A._S._Bradford_House.JPG');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      opacity: 0.2;
+      filter:alpha(opacity=40);
+      z-index: -1;
+      }
+      #btn-login {
+      position: relative; 
+      left: 80%;
+      }
+    | &#x9;
+    | &#x9;
+    title RECycle
+  | &#x9;
+  body
+    // Background
+    #background
+    // Header
+    #header  
+    | &#x9;&#x9;
+    .container
+      #loginbox.mainbox.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2
+        .panel.panel-info
+          .panel-heading
+            .panel-title Sign In 
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          .panel-body(style='padding-top:30px')
+            form#loginform.form-horizontal(role='form', method='post', action='loginUser')
+              .input-group(style='margin-bottom: 25px')
+                span.input-group-addon
+                  i.glyphicon.glyphicon-user
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                input#login-username.form-control(type='text', name='user_name', placeholder='username', required)
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .input-group(style='margin-bottom: 25px')
+                span.input-group-addon
+                  i.glyphicon.glyphicon-lock
+                | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+                input#login-password.form-control(type='password', name='password', placeholder='password', required)
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .form-group(style='margin-top:10px;top: 1800px;')
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .col-sm-12.controls
+              .text-right
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              button#btn-login.btn.btn-success(type='submit') Login 
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .form-group
+              | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+              .col-md-12.control
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            div(style='border-top: 1px solid#888; padding-top:15px; font-size:85%')
+              | Don&apos;t have an account?
+              a(href='signup')
+                | Sign Up Here
+             .text-right
+              a(href="#")  Forgot Password
+      | &#x9;&#x9;&#x9;
+     
+    // Footer
+    #footer  
+

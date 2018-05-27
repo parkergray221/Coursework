@@ -1,0 +1,365 @@
+.navbar{
+  /*Clear the default white space from navbar*/
+  margin-bottom: 0 !important;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/*Set the navbar at top while scrolling*/
+.affix {
+  top:0 !important;
+  width: 100% !important;
+  z-index:10;
+}
+
+#header {
+  background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2013/12/metal-wallpaper-6.jpg");
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height:200px;
+  color: white;
+}
+
+.headercenter {
+  position: relative;
+  float: left;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+}
+
+.white_border {
+  border: 1px solid;
+}
+
+.navtab:hover {
+  cursor: pointer;
+  transition-duration: 1.0s;
+  background-color: black;
+  color:black;
+}
+
+#section1 {
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/08/Metal_wire_mash_seamless.jpg");
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-position: center;
+  background-repeat: repeat;
+  padding-top:50px;
+  color: white;
+}
+
+.jumbotron {
+  border-style: solid;
+  background-color:transparent !important; 
+}
+
+#f {
+  background-image: url("http://www.planwallpaper.com/static/images/6909249-black-hd-background.jpg");
+  border-color: rgb(96, 96, 96);
+  
+}
+
+#blackimg {
+  width: 120px;
+  height: 110px; 
+  float: right;
+  -webkit-filter: invert(100%);
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+/*Middle Line*/
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  background-image: url("http://www.planwallpaper.com/static/images/6909249-black-hd-background.jpg");
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+
+#section2 {
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/08/Metal_wire_mash_seamless.jpg");
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-position: center;
+  background-repeat: repeat;
+  padding-top:50px;
+  color: darkgray;
+}
+
+#a {
+  background-image: url("http://www.planwallpaper.com/static/images/6909249-black-hd-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+    width: 500px;
+    height: 200px;
+    margin: 40px;
+  border: 10px;
+  border-color: rgb(96, 96, 96);
+  border-style: solid;
+}
+#b {
+  background-image: url("http://www.planwallpaper.com/static/images/6909249-black-hd-background.jpg");
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+    width: 500px;
+    height: 200px;
+    margin: 40px;
+  border: 10px;
+  border-style: solid;
+  border-color: rgb(96, 96, 96);
+}
+
+#c {
+  background-image: url("http://www.planwallpaper.com/static/images/6909249-black-hd-background.jpg");
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+    width: 500px;
+    height: 200px;
+    margin: 40px;
+  border: 10px;
+  border-style: solid;
+  border-color: rgb(96, 96, 96);
+}
+
+#d {
+  background-image: url("http://www.planwallpaper.com/static/images/6909249-black-hd-background.jpg");
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    border-top-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  border-bottom-left-radius: 80px;
+    transform:translate(40%,0%);
+    width: 500px;
+    height: 680px;
+    margin: 40px;
+  border: 10px;
+  border-style: solid;
+  border-color: rgb(96, 96, 96);
+}
+
+.progress-bar{
+  color: black;
+}
+
+#a1{
+  animation: animeA1 linear 0.5s infinite alternate;
+}
+@keyframes animeA1 {
+  0%   {width:0%;}
+  100% {width:80%;}
+}
+
+#a2{
+  animation: animeA2 linear 0.75s infinite alternate;
+}
+@keyframes animeA2 {
+				0%   {width:0%;}
+				100% {width:75%;}
+}
+
+
+#a3{
+  animation: animeA3 linear 0.3s infinite alternate;
+}
+@keyframes animeA3 {
+				0%   {width:0%;}
+				100% {width:85%;}
+}
+
+#b1{
+  animation: animeB1 linear 0.3s infinite alternate;
+}
+@keyframes animeB1 {
+				0%   {width:0%;}
+				100% {width:100%;}
+}
+
+#b2{
+  animation: animeB2 linear 0.3s infinite alternate;
+}
+@keyframes animeB2 {
+				0%   {width:0%;}
+				100% {width:100%;}
+}
+
+
+#b3{
+  animation: animeB3 linear 0.7s infinite alternate;
+}
+@keyframes animeB3 {
+				0%   {width:0%;}
+				100% {width:85%;}
+}
+
+#c1{
+  animation: animeC1 linear 1s infinite alternate;
+}
+@keyframes animeC1 {
+				0%   {width:0%;}
+				100% {width:70%;}
+}
+
+#c2{
+  animation: animeC2 linear 1.5s infinite alternate;
+}
+@keyframes animeC2 {
+				0%   {width:0%;}
+				100% {width:70%;}
+}
+
+
+#c3{
+  animation: animeC3 linear 2s infinite alternate;
+}
+@keyframes animeC3 {
+				0%   {width:0%;}
+				100% {width:50%;}
+}
+
+.inline {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+#section3 {
+  background-image: url("https://images.freecreatives.com/wp-content/uploads/2015/08/Metal_wire_mash_seamless.jpg");
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-position: center;
+  background-repeat: repeat;
+  padding-top:50px;
+  color: white;
+}
+
+#g {
+  background-image: url("http://www.planwallpaper.com/static/images/6909249-black-hd-background.jpg");
+   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: rgb(96, 96, 96);
+  
+}
+
+img.smallimg {
+  display: inline-block;
+  padding: 15px;
+  width:70px;
+  height:70px;
+}
+
+#footer {
+  background-image: url("https://bshspeedshop.com/wp-content/uploads/2017/03/bsh-footer-background.jpg");
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top:-15px; 
+  color: white;
+}

@@ -1,0 +1,178 @@
+html
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111304983-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111304983-1');
+    title Add details
+    |     
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    |    
+    script(src='https://code.jquery.com/jquery-2.2.0.min.js')
+    meta(charset='utf-8')
+    | &#x9;
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    | &#x9;
+    script(src='https://code.jquery.com/jquery-3.2.1.js', integrity='sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=', crossorigin='anonymous')
+    | &#x9;
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    | &#x9;
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    | &#x9;
+    link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css')
+    |     
+    // Load Header and Footer
+    script.
+      $(function() {
+      $("#header").load("header");
+      $("#footer").load("footer");
+      });
+    | &#x9;
+    | &#x9;
+    style.
+      #background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/A._S._Bradford_House.JPG');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      opacity: 0.2;
+      filter:alpha(opacity=40);
+      z-index: -1;
+      }
+      .panel {
+      margin-bottom: 20px;
+      margin-top: 20%;
+      background-color: #fff;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+      box-shadow: 0 1px 1px rgba(0,0,0,.05);
+      }
+    title RECycle
+ body
+    // Background
+    #background
+    // Header
+    #header  
+    | &#x9;&#x9;
+  #mainform.container.col-sm-12
+      #signupbox.mainbox.col-md-6.col-md-offset-3.col-sm-8.col-sm-offset-2(style=' margin-top:-60px')
+        .panel.panel-info
+          .panel-heading
+            .panel-title Add details
+            |                             
+            
+          |  
+          |                         
+          .panel-body
+            form.form-horizontal(role='form', method='post', action='add_details?id=#{results}', onsubmit='return checkblank(this);')
+              #signupalert.alert.alert-danger(style='display:none')
+               p Error:
+               |                                     
+               span
+            
+              .form-group
+               label.col-md-3.control-label(for='square_size') Square Size
+               |                                     
+               .col-md-9
+                input.form-control(type='number', name='square_size', placeholder='Eg. 2000')
+
+              .form-group
+               label.col-md-3.control-label(for='number_of_bedrooms') Number of Bedrooms
+               |                                     
+               .col-md-9
+                input.form-control(type='number', name='number_of_bedrooms', placeholder='Eg. 3')
+
+              .form-group
+               label.col-md-3.control-label(for='no_baths') Number of Baths
+               |                                     
+               .col-md-9
+                input.form-control(type='number', name='no_baths', placeholder='Eg. 2')
+
+              .form-group
+               label.col-md-3.control-label(for='lot_size') Lot Size
+               |                                     
+               .col-md-9
+                input.form-control(type='number', name='lot_size', placeholder='Eg. 3000')
+
+
+              .form-group
+               label.col-md-3.control-label(for='year_of_construction') Year of construction
+               |                                     
+               .col-md-9
+                input.form-control(type='number', name='year_of_construction', placeholder='Eg. 1987')
+
+              .form-group
+               label.col-md-3.control-label(for='property_type') Property Type
+               |                                     
+               .col-md-9
+                input.form-control(type='text', name='property_type', placeholder='Eg. Single Family Home')
+
+              .form-group
+               label.col-md-3.control-label(for='house_number') House Number
+               |                                     
+               .col-md-9
+                input.form-control(type='text', name='house_number', placeholder='Eg. 2022')
+
+              .form-group
+               label.col-md-3.control-label(for='street') Street Name
+               |                                     
+               .col-md-9
+                input.form-control(type='text', name='street', placeholder='Eg. Walnut Ave')
+            
+              .form-group
+               label.col-md-3.control-label(for='zipcode') Zipcode
+               |                                     
+               .col-md-9
+                input.form-control(type='text', name='zipcode', placeholder='Eg. 94538')
+             
+              .form-group
+               label.col-md-3.control-label(for='city') City
+               |                                     
+               .col-md-9
+                input.form-control(type='text', name='city', placeholder='Eg. San Francisco')
+                                          
+              .form-group
+               label.col-md-3.control-label(for='state') State
+               |                                     
+               .col-md-9
+                input.form-control(type='text', name='state', placeholder='Eg. CA')
+
+              .form-group
+               label.col-md-3.control-label(for='country') Country
+               |                                     
+               .col-md-9
+                input.form-control(type='text', name='country', placeholder='Eg. United States')
+              
+              .form-group
+               label.col-md-3.control-label(for='price') Price
+               |                                     
+               .col-md-9
+                input.form-control(type='number', min = '0'  name='price', placeholder='Eg. 4000.00')
+               
+              .form-group
+               label.col-md-3.control-label(for='image') Image
+               |                                     
+               .col-md-9
+                 input.form-control(type='file', name='image')
+                
+
+              .form-group
+              .col-md-offset-3.col-md-9
+                  button#btn-signup.btn.btn-info(type='submit')
+                   amp Add details
+
+
+         
+

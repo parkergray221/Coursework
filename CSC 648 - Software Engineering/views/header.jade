@@ -1,0 +1,340 @@
+doctype html
+html
+  head
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-111304983-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111304983-1');
+    title RECycle
+    // Using Bootstrap3.3.7
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
+    script.
+      function openNav() {
+      document.getElementById("mySidenav").style.width = "70%";
+      // document.getElementById("flipkart-navbar").style.width = "50%";
+      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.body.style.backgroundColor = "rgba(0,0,0,0)";
+      }
+    style.
+      #flipkart-navbar {
+      background-color:hsl(210, 100%, 20%);
+      color: #FFFFFF;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      }
+      .row1{
+      padding-top: 10px;
+      }
+      .row2 {
+      padding-bottom: 20px;
+      }
+      .flipkart-navbar-input {
+      padding: 11px 16px;
+      border-radius: 2px 0 0 2px;
+      border: 0 none;
+      outline: 0 none;
+      font-size: 15px;
+      }
+      .flipkart-navbar-button {
+      background-color: #ffe11b;
+      border: 1px solid #ffe11b;
+      border-radius: 0 2px 2px 0;
+      color: #565656;
+      padding: 10px 0;
+      height: 43px;
+      cursor: pointer;
+      }
+      .cart-button {
+      background-color: #2469d9;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .23), inset 1px 1px 0 0 hsla(0, 0%, 100%, .2);
+      padding: 10px 0;
+      text-align: center;
+      height: 41px;
+      border-radius: 2px;
+      font-weight: 500;
+      width: 120px;
+      display: inline-block;
+      color: #FFFFFF;
+      text-decoration: none;
+      color: inherit;
+      border: none;
+      outline: none;
+      }
+      .upper-links {
+      display: inline-block;
+      padding: 0 11px;
+      line-height: 23px;
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: 0;
+      color: inherit;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      }
+      .dropdown {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 0px;
+      }
+      .dropdown:hover .dropdown-menu {
+      display: block;
+      }
+      #zip{color: #000000;}
+      .dropdown .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      display: none;
+      background-color: #fff;
+      color: #333;
+      left: 0px;
+      border: 0;
+      border-radius: 0;
+      box-shadow: 0 4px 8px -3px #555454;
+      margin: 0;
+      padding: 0px;
+      }
+      .links {
+      color: #fff;
+      text-decoration: none;
+      }
+      .links:hover {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      }
+      .profile-links {
+      font-size: 12px;
+      font-family: 'Roboto', sans-serif;
+      border-bottom: 1px solid #e9e9e9;
+      box-sizing: border-box;
+      display: block;
+      padding: 0 11px;
+      line-height: 23px;
+      }
+      .profile-li{
+      padding-top: 2px;
+      }
+      .largenav {
+      display: none;
+      }
+      .smallnav{
+      display: block;
+      }
+      #search_input{
+      color: #000000;
+      width: 300px;
+      }
+      .smallsearch{
+      margin-left: 15px;
+      margin-top: 15px;
+      }
+      .menu{
+      cursor: pointer;
+      }
+      @media screen and (min-width: 768px) {
+      .largenav {
+      display: block;
+      }
+      .smallnav{
+      display: none;
+      }
+      .smallsearch{
+      margin: 0px;
+      }
+      }
+      /*Sidenav*/
+      .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #fff;
+      overflow-x: hidden;
+      transition: 0.5s;
+      box-shadow: 0 4px 8px -3px #555454;
+      padding-top: 0px;
+      }
+      .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s
+      }
+      .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      color: #fff;
+      }
+      @media screen and (max-height: 450px) {
+      .sidenav a {font-size: 18px;}
+      }
+      .sidenav-heading{
+      font-size: 36px;
+      color: #fff;
+      }
+      #flipkart-navbar {
+      margin-bottom: 15px;
+      }
+  body
+    header
+      #flipkart-navbar
+        .container
+          .row.row1
+            ul.largenav.pull-right
+              li.upper-links
+                a.links(href='homepage') 
+                 span.glyphicon.glyphicon-home
+              li.upper-links
+                a.links(href='login') Agent Login
+              li.upper-links
+                a.links(href='signup') Sign Up
+              li.upper-links
+                a.links(href='aboutus') About us
+              li.upper-links
+                a.links(href='http://clashhacks.in/')
+                  svg(width='16px', height='12px', style='overflow: visible;')
+              li.upper-links.dropdown
+                span.glyphicon.glyphicon-th-large
+                ul.dropdown-menu
+                  li.profile-li
+                    a.profile-links(href='homepage') 
+                      span.glyphicon.glyphicon-home
+                  li.profile-li
+                    a.profile-links(href='login') Agent Login
+                  li.profile-li
+                    a.profile-links(href='signup') Sign Up
+                  li.profile-li
+                    a.profile-links(href='aboutus') About us
+          .row.row2
+            .col-sm-3
+              h2(style='margin:0px;')
+                span.smallnav.menu(onclick='openNav()') ☰ RECycle
+              h1(style='margin:0px;') 
+               a(href='homepage') RECycle
+              h5 Short for Real Estate Cycle. SFSU Software Engineering Fall 2017 Student Project.For Demonstration Purposes only
+            .col-sm-7.col-md-7
+             form.navbar-form(role='form', method='post',action='search_results', onsubmit="return validateForm() & saveComment()")
+              select.selectpicker.form-control( name="selectpicker",id ="zip",data-style='btn-danger')
+                  option(value='none',selected='selected') Search by 
+                 
+                  option(value='zipcode') Zipcode
+                 
+                  option(value='city') City
+                  
+                  option(value='street') Street Name
+               span#search.search_disp
+                  input.form-control(type='text', placeholder='Search', id="search_input")
+              form(role='form',method='post',action='search')
+                 button.btn.btn-default(type='submit')
+                  i.glyphicon.glyphicon-search
+                script.
+                  function validateForm() {
+                    var x = document.getElementById("search_input").value;
+                    console.log(x);
+                    if (x == "") {
+                      alert("Value must be filled out");
+                      return false;
+                    }
+                   }
+                  var sel = document.getElementById("zip");
+                  var tex = document.getElementById("search_input");
+                  sel.addEventListener("change", function() {
+                  if(sel.value == 'zipcode')
+                  {
+                  tex.setAttribute("placeholder","Eg.94536");
+                  tex.setAttribute("name","zipcode");
+                  tex.setAttribute("onkeyup","allnumeric(tex.value)");
+                  }
+                  else if(sel.value == 'city')
+                  {
+                  tex.setAttribute("placeholder","Eg.San Francisco");
+                  tex.setAttribute("name","city");
+                  tex.setAttribute("onkeyup","alltext(tex.value);");
+                  }
+                  else if (sel.value == 'street')
+                  {
+                  tex.setAttribute("placeholder","Eg.Euclid Ave");
+                  tex.setAttribute("name","street");
+                  }
+                  else
+                  {
+                  tex.setAttribute("placeholder","Search for a Property");
+                  }
+                  });
+                  function allnumeric(inputtxt)
+                   {
+                     var numbers = /^[0-9]*$/;
+                     if (inputtxt == "")
+                     {
+                       return;
+                     }
+                     if(!inputtxt.match(numbers))
+                     {
+                       alert('Please input numeric characters only');
+                       
+                      }
+                      if(inputtxt.length > 5)
+                      {
+                      alert('Please input a zipcode of 5 characters');
+                      }
+                      }
+                  function alltext(inputtxt)
+                    {
+                      var letters = /^[A-Za-z]+$/;
+                      inputtxt = inputtxt.replace(" ","");
+                     if (inputtxt == "")
+                     {
+                       return;
+                     } 
+                     if(!inputtxt.match(letters))
+                     
+                     {
+                       alert('Please input letters only');
+                       
+                     
+                      }
+
+                    }
+                    document.getElementById("search_input").value = localStorage.getItem("search");
+                    document.getElementById("zip").value = localStorage.getItem("option");
+
+                    function saveComment() {
+                    var search = document.getElementById("search_input").value;
+                    var select = document.getElementById("zip").value;
+                    console.log(select);
+
+                    localStorage.setItem("search", search);
+                    localStorage.setItem("option", select);
+                    localStorage.reload();
+                    //localStorage.clear();
+                    return false;
+                   //return true;
+                   }
+       #mySidenav.sidenav
+        .container(style='background-color: #2874f0; padding-top: 10px;')
+          span.sidenav-heading Home
+          a.closebtn(href='javascript:void(0)', onclick='closeNav()') ×
+        a.profile-links(href='homepage') 
+         span.glyphicon.glyphicon-home
+        a.profile-links(href='login') Agent Login
+        a.profile-links(href='signup') Sign Up
+        | 
+        a.profile-links(href='aboutus') About us
+

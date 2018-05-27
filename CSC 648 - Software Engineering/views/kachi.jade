@@ -1,0 +1,368 @@
+doctype html
+html
+head
+    title KaChi Profile
+    // Insert CSS
+    link(rel='stylesheet', type='text/css', href='/fa17g13/stylesheets/HomepageCSS.css')
+    // Insert Bootstrap
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    | &#x9;&#x9;
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css')
+    | &#x9;
+  body(data-spy='scroll', data-target='.navbar', data-offset='50')
+    // Header
+    #header.container-fluid
+      h1.headercenter Welcome to Rex Lau HomePage
+    // NavBar
+    nav.navbar.navbar-inverse(data-spy='affix', data-offset-top='197')
+      .container-fluid
+        // Header
+        .navbar-header.white_border
+          a.navbar-brand
+            img(src='http://icons.iconarchive.com/icons/mattahan/umicons/256/Letter-L-icon.png', width='30', height='30')
+          |         
+          a.navbar-brand.navtab(href='#') TOP
+        // Tabs
+        ul.nav.navbar-nav
+          li.active.white_border.navtab
+            a(href='#section1')
+              | About 
+              i.glyphicon.glyphicon-user  
+          |         
+          li.white_border.navtab
+            a(href='#section2')
+              | Skill 
+              i.glyphicon.glyphicon-wrench  
+          |         
+          li.white_border.navtab
+            a(href='#section3')
+              | Contact
+              i.glyphicon.glyphicon-phone-alt  
+          
+    // Section
+    #section1
+      h1.text-center About Me!
+      |       
+      |       
+      |       
+      .container
+        .col-sm-8.col-sm-offset-2
+          #f.jumbotron
+            .row
+              .col-sm-8
+                h4 Name: Rex Lau
+                |                   
+                h4 Gender: Male
+                |                   
+                h4 Job: Student
+                |                   
+                h4 BirthDate: 01/08/1993
+              |                 
+              .col-sm-4
+                img#blackimg(src='https://images.vexels.com/media/users/3/129616/isolated/preview/fb517f8913bd99cd48ef00facb4a67c0-businessman-avatar-silhouette-by-vexels.png')
+      |       
+      |       
+      .container
+        .row
+          .col-sm-12.col-sm-offset-3.page-header
+            h4#timeline Timeline
+          |           
+          |           
+          .col-sm-12.col-sm-offset-3
+            ul.timeline
+              // Timeline#1
+              li
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title 1993 - Born in HongKong, China
+                   .thumbnail
+                      img(src='https://tctechcrunch2011.files.wordpress.com/2015/11/hong-kong.jpg')
+              // Timeline#2
+              li.timeline-inverted
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title 2003 - Moved to United States
+                  |                 
+                  .timeline-body
+                    .thumbnail
+                      img(src='https://www.california-tour.com/wp-content/uploads/thumbnails/california.jpg')
+              // Timeline#3
+              li
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title 2005-2007 Went to West Lake Middle School
+                  |                 
+                  .timeline-body
+                    .thumbnail
+                      img(src='https://ww2.kqed.org/news/wp-content/uploads/sites/10/2016/03/RS18805_IMG_20160315_114554-qut-1920x1440.jpg')
+              // Timeline#4
+              li.timeline-inverted
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title 2007 - 2011 - Went to Oakland Technical High School
+                  |                 
+                  .timeline-body
+                    .thumbnail
+                      img(src='http://eaop.berkeley.edu/sites/default/files/portfolio/school_tech2.jpg')
+              // Timeline#5
+              li
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title 2011 - 2015 - Went to Laney College
+                  |                 
+                  .timeline-body
+                    .thumbnail
+                      img(src='http://oaklandlocal.com/wp-content/uploads/2013/08/Laney-College.jpg')
+                  // Timeline#6
+              |               
+              li.timeline-inverted
+                .timeline-panel
+                  .timeline-heading
+                    h4.timeline-title 2015 - Now! - Going to San Francisco State University
+                  |                 
+                  .timeline-body
+                    .thumbnail
+                      img(src='http://media.nbcbayarea.com/images/1200*900/sfsu.jpg')
+    |     
+    |     
+    #section2
+      .container
+        h1.text-center My Skills
+        |         
+        .container-fluid
+          .row
+            .col-sm-6
+              h3.text-center(style='transform:translate(80%,0%);  color: darkgray;') Language
+              |               
+              #a.jumbotron
+                h3(style='transform:translate(90%,-240%); color: darkgray;') English
+                |                 
+                .container(style='transform:translate(0%,-45%);')
+                  // Speaking
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-earphone  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #a1.progress-bar.progress-bar-success 80%
+                  // Listening
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-headphones  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #a2.progress-bar.progress-bar-warning 75%
+                  // Writing
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-pencil  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #a3.progress-bar.progress-bar-primary 85% 
+              |               
+              #b.jumbotron
+                h3(style='transform:translate(90%,-240%); color: darkgray;') Chinese
+                |                   
+                .container(style='transform:translate(0%,-45%);')
+                  // Speaking
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-earphone  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #b1.progress-bar.progress-bar-primary 100%
+                  // Listening
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-headphones  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #b2.progress-bar.progress-bar-primary 100%
+                  // Writing
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-pencil  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #b3.progress-bar.progress-bar-success 85% 
+              |               
+              #c.jumbotron
+                h3(style='transform:translate(85%,-240%); color: darkgray;') Japanese
+                |                   
+                .container(style='transform:translate(0%,-45%);')
+                  // Speaking
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-earphone  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #c1.progress-bar.progress-bar-warning 70%
+                  // Listening
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-headphones  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #c2.progress-bar.progress-bar-warning 70%
+                  // Writing
+                  .container
+                    .row
+                      .col-md-1
+                        i.glyphicon.glyphicon-pencil  
+                      |                       
+                      .col-md-10
+                        .progress
+                          #c3.progress-bar.progress-bar-danger 50% 
+            |             
+            .col-sm-6
+              h3.text-center(style='transform:translate(120%,0%);  color: darkgray;') Programming Language
+              |               
+              #d.jumbotron
+                .row(style='padding: 5px;')
+                  .col-sm-2
+                    img(src='https://www.rigzsoft.co.uk/media//cplusplus.png')
+                  |                  
+                  .col-sm-10
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-primary(style='width: 85%;') Advanced
+                |                 
+                .row(style='padding: 5px;')
+                  .col-sm-2
+                    img(src='https://thenewboston.com/photos/users/287/original/83fc712d18e134776ba385bf4c21e134.png')
+                  |                  
+                  .col-sm-10
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-success(style='width: 80%;') Advanced
+                |                 
+                .row(style='padding: 5px;')
+                  .col-sm-2
+                    img(src='http://www.iconhot.com/icon/png/file-icons-vs-2/256/java-6.png')
+                  |                  
+                  .col-sm-10
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-primary(style='width: 85%;') Advanced
+                |                 
+                .row(style='padding: 5px;')
+                  .col-sm-2
+                    img(src='http://img.freepik.com/free-icon/py-file-format_318-45048.jpg?size=338&ext=jpg')
+                  |                  
+                  .col-sm-10
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-success(style='width: 75%;') Intermediate
+                |                 
+                .row(style='padding: 5px;')
+                  .col-sm-2
+                    img(src='http://icons.iconarchive.com/icons/hechiceroo/mnemo/256/html-icon.png')
+                  |                  
+                  .col-sm-10
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-warning(style='width: 60%;') Basic
+                |                 
+                .row(style='padding: 5px;')
+                  .col-sm-2
+                    img(src='https://cdn2.iconfinder.com/data/icons/web-development-17/64/css_style_web_browser_development_language-2-512.png')
+                  |                  
+                  .col-sm-10
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-warning(style='width: 60%;') Basic
+                |                 
+                .row(style='padding: 5px;')
+                  .col-sm-2
+                    img(src='http://www.iconhot.com/icon/png/coded/512/page-php.png')
+                  |                  
+                  .col-sm-10
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-warning(style='width: 60%;') Basic
+                |                 
+                .row(style='padding: 5px;')
+                  .col-sm-2
+                    img(src='https://cdn2.iconfinder.com/data/icons/coding-files-extensions/512/coding-file-extension-javascript-512.png')
+                  |                  
+                  .col-sm-10
+                    .progress.progress-striped.active
+                      .progress-bar.progress-bar-warning(style='width: 60%;') Basic
+                |                 
+                |                 
+                .inline
+                  img(src='https://wikiprogramming.org/wp-content/uploads/2016/10/jquery-icon.png')
+                |                 
+                .inline
+                  img(src='http://www.exuberantsolutions.com/course_logo/css3.png')
+                |                 
+                .inline
+                  img(src='https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png')
+                |                 
+                .inline
+                  img(src='https://azure.microsoft.com/svghandler/sql-database/?width=600&height=315')
+                |                 
+                .inline
+                  img(src='https://fthmb.tqn.com/UaYBzs60LZumCj5pVyfQGTgnIqI=/735x0/about/xml-file-56a6f9dd3df78cf772913ac5.png')
+                |                 
+                .inline
+                  img(src='https://www.percona.com/sites/default/files/json-logo.png')
+                |                 
+                .inline
+                  img(src='https://developer.android.com/_static/images/android/touchicon-180.png')
+                |                 
+                .inline
+                  img(src='https://cdn4.iconfinder.com/data/icons/file-type-1-1/100/ajax-512.png')
+    |     
+    #section3
+      h1.text-center(style='font-size: 50px;') How to Contact ME!?
+      |       
+      .container
+        #g.jumbotron
+          .row
+            .col-md-12(style='left: 50%;>\
+            <form method=')
+              | Name
+              input(type='text', name='name', style='width: 300px;')
+              |                 Email
+              input(type='text', name='email', style='width: 300px;')
+              |                 Comment
+              textarea(name='comment', row='5', cols='40', style='width:300px;')  
+              |  
+              br
+              |                 
+              |                  
+              input(type='submit', name='submit', value='Submit', style='color:black;')
+    |     
+    |     
+    #footer
+      .container
+        .row
+          .col-sm-12(style='transform:translate(57%,50%);')
+            h4 This Website is Made By Rex Lau
+          |           
+          .col-sm-8(style='transform:translate(90%,150%);')
+            | codepen &copy; 2017. All Rights Reversed
+          |           
+          .col-sm-4(style='transform:translate(100%,0%);')
+            a(href='#')
+              img.smallimg(src='http://www.newdesignfile.com/postpic/2010/07/transparent-facebook-logo-icon_333613.png', alt='My Facebook')
+            |             
+            a(href='https://github.com/KaChiLau/')
+              img.smallimg(src='http://www.iconsdb.com/icons/preview/caribbean-blue/github-11-xxl.png', alt='My Facebook')
+            |             
+            a(href='http://linkedin.com/in/kachi-lau-011b44135')
+              img.smallimg(src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Linkedin_icon.svg/2000px-Linkedin_icon.svg.png', alt='My Facebook')
